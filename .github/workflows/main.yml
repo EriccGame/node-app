@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build Docker image
-        run: docker build -t jrgerne/node-app:latest .
+        run: docker build -t ericcgame/node-app:latest .
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -28,4 +28,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Push Docker image
-        run: docker push jrgerne/node-app:latest
+        run: docker push ericcgame/node-app:latest
